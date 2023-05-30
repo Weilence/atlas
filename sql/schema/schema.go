@@ -252,6 +252,11 @@ type (
 		T string
 	}
 
+	// A INET6Type defines a INET6 type.
+	INET6Type struct {
+		T string
+	}
+
 	// UnsupportedType represents a type that is not supported by the drivers.
 	UnsupportedType struct {
 		T string
@@ -327,6 +332,7 @@ func (*StringType) typ()      {}
 func (*BinaryType) typ()      {}
 func (*SpatialType) typ()     {}
 func (*UUIDType) typ()        {}
+func (*INET6Type) typ()       {}
 func (*IntegerType) typ()     {}
 func (*DecimalType) typ()     {}
 func (*UnsupportedType) typ() {}
